@@ -1,0 +1,137 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+body{
+    background-color: #fff;
+    font-family: sans-serif;
+}
+.box{
+    background:url(https://cdn.rawgit.com/ManzDev/cursos-assets/gh-pages/css3/earth-2.jpg);
+    background-size: cover;
+    border: 2px solid #000;
+    width:300px;
+    height: 300px;
+    border-radius: 50%;
+    margin-top: 30px;
+    animation: animas 30s linear infinite;
+    box-shadow:
+     0 0 25px rgba(75, 31, 31, 0.1),
+    -8px -8px 15px #000 inset,
+    25px 25px 45px rgba(0,0,0,0.45) inset,
+    45px 45px 25px rgba(0,0,0,0.5) inset
+;
+     margin: 6em auto;
+     transform: rotateX(6deg) rotateY(6deg) rotateZ(6deg);
+}
+@keyframes animas{
+    0%{
+        background-position:0 0;
+    }50%{
+        background-position:360px 0;
+    }
+    100%{
+        background-position: 0 0;
+    }
+}
+
+nav{
+    background-color:rgba(36, 176, 211, 0.966);
+    width: 100%;
+    height: 80px;
+    border-bottom: 3px solid black;
+}
+nav ul{
+    float: right;
+    margin-right: 20px;
+
+}
+nav ul li{
+    display: inline-block;
+    margin-left: 20px;
+    line-height: 80px;
+}
+nav ul li a{
+    color: white;
+    font-size: 30px;
+    padding: 7px 10px;
+}
+.active{
+    background-color: skyblue;
+    border-radius: 4px;
+}
+.logo{
+    line-height: 80px;
+    color: white;
+    font-size: 38px;
+    padding: 5px 10px;
+}
+.checkbtn{
+    cursor: pointer;
+    float: right;
+    margin-right: 40px;
+    font-size: 30px;
+    line-height: 80px;
+    color: white;
+    display: none;
+
+}
+#check{
+    display: none;
+}
+a:hover{
+    background-color: skyblue;
+    border-radius: 4px;
+}
+@media screen and (max-width:926px) {
+    nav ul li a{
+        font-size: 16px;
+    }
+    
+    .logo{
+        font-size: 30px;
+        padding-left:40px;
+    }
+    
+}
+ 
+@media  screen and (max-width:854px){
+    .checkbtn{
+        display: block;
+
+    }
+    ul{
+        position: absolute;
+        top: 80px;
+        background-color: darkblue;
+        width: 100%;
+        height:100vh;
+        left: -100%;
+        transition: all .5s;
+        text-align: center;
+        border-bottom: 3px solid black;
+
+    }
+    nav ul li{
+        display:block;
+        margin-top:25px;
+    }
+    nav ul li a{
+        font-size: 30px;
+        
+    }
+    .active{
+        background-color: darkblue;
+        color: white;
+    }
+    a:hover{
+        color:blue;
+        background-color: darkblue;
+    }
+    #check:checked ~ ul{
+        left: 0;
+    }
+}
